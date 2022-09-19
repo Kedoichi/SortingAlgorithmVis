@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizations</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-settings">
+        <ul class="nav-container">
+          <li class="nav-item ListSize">
+            <div class="row-container">
+              <label for="ListSize">List Size</label>
+              <input
+                type="text"
+                class="input"
+                min="10"
+                max="2000"
+                value="500"
+                id="ListSize"
+              />
+            </div>
+            <input type="range" min="10" max="2000" value="500" id="ListSize" />
+          </li>
+          <li class="nav-item Speed">
+            <div class="row-container">
+              <label for="Speed">Speed</label>
+
+              <input
+                type="text"
+                class="input"
+                min="0"
+                max="100"
+                value="10"
+                id="Speed"
+              />
+            </div>
+            <input type="range" min="0" max="100" value="10" id="Speed" />
+          </li>
+          <li class="nav_item Algorithm">
+            <label for="Algorithm">Algorithm</label>
+            <select name="Algorithm" id="Algorithm">
+              <option value="BubbleSort">Bubble Sort</option>
+              <option value="SelectionSort">Selection Sort</option>
+              <option value="InsertionSort">Insertion Sort</option>
+              <option value="MergeSort">Merge Sort</option>
+              <option value="QuickSort">Quick Sort</option>
+              <option value="HeapSort">Heap Sort</option>
+            </select>
+          </li>
+          <li class="nav_item Action">
+            <button id="GenerateNewArray">Generate</button>
+            <button id="GenerateNewArray">Get Last Array</button>
+            <button id="Sort">Sort</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

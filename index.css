@@ -46,7 +46,7 @@
   align-items: center;
   padding-bottom: 15px;
 }
-.nav-item input[type='text'] {
+.nav-item input {
   width: 30%;
   text-align: center;
   border: none;

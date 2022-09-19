@@ -15,30 +15,34 @@
             <div class="row-container">
               <label for="ListSize">List Size</label>
               <input
-                type="text"
                 class="input"
                 min="10"
                 max="2000"
                 value="500"
-                id="ListSize"
+                id="ListSizeInput"
               />
             </div>
-            <input type="range" min="10" max="2000" value="500" id="ListSize" />
+            <input
+              type="range"
+              min="10"
+              max="2000"
+              value="500"
+              id="ListSizeSlider"
+            />
           </li>
           <li class="nav-item Speed">
             <div class="row-container">
               <label for="Speed">Speed</label>
 
               <input
-                type="text"
                 class="input"
                 min="0"
                 max="100"
                 value="10"
-                id="Speed"
+                id="SpeedInput"
               />
             </div>
-            <input type="range" min="0" max="100" value="10" id="Speed" />
+            <input type="range" min="0" max="100" value="10" id="SpeedSlider" />
           </li>
           <li class="nav_item Algorithm">
             <label for="Algorithm">Algorithm</label>
@@ -52,12 +56,15 @@
             </select>
           </li>
           <li class="nav_item Action">
-            <button id="GenerateNewArray">Generate</button>
-            <button id="GenerateNewArray">Get Last Array</button>
+            <button id="Generate">Generate</button>
+            <button id="GetLastArray">Get Last Array</button>
             <button id="Sort">Sort</button>
           </li>
         </ul>
       </div>
     </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/arraygeneration.js"></script>
   </body>
 </html>

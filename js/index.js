@@ -4,8 +4,12 @@ var generateListBTN = document.getElementById('Generate')
   var listSizeInput = document.getElementById('ListSizeInput')
   var listSizeSlider = document.getElementById('ListSizeSlider')
   listSizeInput.value = listSizeSlider.value
+  window.list = generateRandomList(listSizeSlider.value)
+  renderList(window.list)
   listSizeSlider.oninput = function () {
     listSizeInput.value = listSizeSlider.value
+    window.list = generateRandomList(listSizeSlider.value)
+    renderList(window.list)
   }
 })()
 ;(function () {
@@ -21,13 +25,14 @@ var generateListBTN = document.getElementById('Generate')
 generateListBTN.onclick = function () {
   var size = document.getElementById('ListSizeInput').value
   window.list = generateRandomList(size)
-  console.log(window.list)
+  renderList(window.list)
 }
 
 // Auto update value of ListSizeInput when listSizeSlider is changed
 $('#ListSizeInput').blur(() => {
   var size = $('#ListSizeInput').val()
   $('#ListSizeSlider').val(size)
+  autoGenerateAndRenderList(size)
 })
 
 $('#ListSizeInput').on('keyup', (e) => {
@@ -47,3 +52,8 @@ $('#SpeedInput').on('keyup', (e) => {
     $('#SpeedInput').blur()
   }
 })
+
+function autoGenerateAndRenderList(lstSize) {
+  window.list = generateRandomList(lstSize)
+  renderList(window.list)
+}

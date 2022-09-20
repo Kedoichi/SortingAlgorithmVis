@@ -12,3 +12,9 @@ function renderList(list) {
   })
   container.innerHTML = UIContents
 }
+
+function pointerPointAt(a, b) {}
+
+function endSwappingStep(a, b) {}
+
+function swap(a, b) {}

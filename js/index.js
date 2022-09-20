@@ -1,4 +1,6 @@
 var generateListBTN = document.getElementById('Generate')
+var sortingAlgo = document.getElementById('Algorithm')
+var sortBTN = document.getElementById('Sort')
 
 ;(function () {
   var listSizeInput = document.getElementById('ListSizeInput')
@@ -27,7 +29,10 @@ generateListBTN.onclick = function () {
   window.list = generateRandomList(size)
   renderList(window.list)
 }
-
+sortBTN.onclick = function () {
+  unsortedList = [...window.list]
+  executeSorting(unsortedList)
+}
 // Auto update value of ListSizeInput when listSizeSlider is changed
 $('#ListSizeInput').blur(() => {
   var size = $('#ListSizeInput').val()
@@ -56,4 +61,30 @@ $('#SpeedInput').on('keyup', (e) => {
 function autoGenerateAndRenderList(lstSize) {
   window.list = generateRandomList(lstSize)
   renderList(window.list)
+}
+function swapListElement(lst, first, second) {
+  var temp = lst[first]
+  lst[first] = lst[second]
+  lst[second] = temp
+}
+
+function executeSorting(lst) {
+  switch (sortingAlgo.value) {
+    case '0':
+      alert('Please select an algorithm to sort the list')
+      break
+    case '1':
+      doBubbleSort(lst)
+      break
+    case '2':
+      break
+    case '3':
+      break
+    case '4':
+      break
+    case '5':
+      break
+    case '6':
+      break
+  }
 }

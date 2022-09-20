@@ -81,6 +81,19 @@ body {
   background: var(--white);
   cursor: pointer;
 }
+.Algorithm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Algorithm {
+  margin-top: 8px;
+  padding: 5px 0px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+}
 #listContainer {
   margin: 20px 30px;
   display: flex;

@@ -111,7 +111,7 @@ body {
 }
 .Action button {
   flex-grow: 2;
-  background-color: var(--column);
+  background-color: var(--select);
   border: none;
   border-radius: 5px;
   color: var(--white);
@@ -123,3 +123,12 @@ body {
   margin: 4px 2px;
   cursor: pointer;
 }
+
+.Action button:disabled{
+  background-color: var(--column);
+  cursor: not-allowed;
+ß}
+
+
+git config --global user.email "haizzzchic@gmail.com"
+git config --global user.name "Kedoichi"

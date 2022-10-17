@@ -1,27 +1,20 @@
-function generateRandomList(size) {
-  var array = []
-  for (var i = 1; i <= size; i++) {
-    array.push(i)
+// Create random array of numbers from 1 to length
+function generateRamdomArray(length) {
+  array = [];
+  for (var i = 1; i <= length; i++) {
+    array.push(i + 1);
   }
-  return shuffle(array)
+  return shuffle(array);
 }
 
-function shuffle(array) {
-  var currentLength = array.length,
-    temporaryValue,
-    randomIndex
-
-  // shuffle the array by swap random element with the last element
-  while (0 !== currentLength) {
-    // Pick a random element in the remaining array
-    randomIndex = Math.floor(Math.random() * currentLength)
-    currentLength -= 1
-
-    // Swap
-    temporaryValue = array[currentLength]
-    array[currentLength] = array[randomIndex]
-    array[randomIndex] = temporaryValue
-  }
-
-  return array
+function shuffle (array){
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
 }

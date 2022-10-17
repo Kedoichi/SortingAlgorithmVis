@@ -1,20 +1,14 @@
-var container = document.getElementById('listContainer')
+var Container = $("#listContainer");
 
-function renderList(list) {
-  container.innerHTML = ''
-  var size = list.length
-  window.containerScale = container.clientHeight / size
-  var UIContents = ''
-  list.forEach((element) => {
-    UIContents += `<div class="bar" id="item-${element}" style="height:${
-      containerScale * element
-    }px"></div>`
-  })
-  container.innerHTML = UIContents
+// Render List
+async function renderList(list) {
+  return new Promise((resolve, reject) => {
+    var UIList = "";
+    var containerScale = (Container[0].clientHeight - 20) / list.length;
+    list.forEach(function (element) {
+      UIList+=`<div class="bar" id="item-${element}"  style="height:${containerScale * element}px"></div>`
+    });
+    Container.html(UIList);
+    resolve();
+  });
 }
-
-function pointerPointAt(a, b) {}
-
-function endSwappingStep(a, b) {}
-
-function swap(a, b) {}

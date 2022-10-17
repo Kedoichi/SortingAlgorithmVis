@@ -13,7 +13,6 @@ var algorithm;
 
 //Handle Field Input
 $(function handleSizeInput() {
-  stopTrigger();
   var ListSize = ListSizeInputField.val();
   var ListSizeSlider = ListSizeInputSlider.val();
   window.list = generateRamdomArray(ListSize);
@@ -27,12 +26,12 @@ $(function handleSizeInput() {
     ListSizeInputField.val(ListSizeInputSlider.val());
     window.list = generateRamdomArray(ListSizeInputSlider.val());
     renderList(window.list);
+    stopTrigger();
   });
 });
 
 //Hanle Speed Input to delay
 $(function handleSpeedInput() {
-  stopTrigger();
   var Speed = SpeedInputField.val();
   var SpeedSlider = SpeedInputSlider.val();
   delay = Speed;
@@ -43,6 +42,7 @@ $(function handleSpeedInput() {
   SpeedInputSlider.on("input", function () {
     SpeedInputField.val(SpeedInputSlider.val());
     delay = SpeedInputSlider.val();
+    stopTrigger();
   });
 });
 
@@ -65,7 +65,6 @@ SortBTN.on("click", async function () {
 });
 
 Algorithm.change(function () {
-  console.log("changed");
   SortBTN.disabled = true;
   stopTrigger();
   renderList(window.list);
@@ -96,19 +95,15 @@ async function executeAlgorithm(list) {
     case "1":
       return await bubbleSort(list);
     case "2":
-      return await enhancedBubbleSort(list);
-    case "3":
       return await insertionSort(list);
-    case "4":
+    case "3":
       return await selectionSort(list);
-    case "5":
+    case "4":
       return await mergeSort(list);
-    case "6":
+    case "5":
       return await quickSort(list);
-    case "7":
+    case "6":
       return await heapSort(list);
-    case "8":
-      return await shellSort(list);
     default:
       return alert("Please select an algorithm");
   }

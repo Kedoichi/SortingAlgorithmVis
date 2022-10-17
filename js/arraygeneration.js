@@ -1,7 +1,7 @@
 // Create random array of numbers from 1 to length
 function generateRamdomArray(length) {
   array = [];
-  for (var i = 1; i <= length; i++) {
+  for (var i = 0; i < length; i++) {
     array.push(i + 1);
   }
   return shuffle(array);

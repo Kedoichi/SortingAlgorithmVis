@@ -1,6 +1,6 @@
 :root {
   --black: #373331;
-  --column: #605a56;
+  --column: #343a40;
   --select: #80ac7b;
   --white: #e8eaa1;
 }
@@ -106,7 +106,7 @@ body {
   background-color: var(--column);
   flex-grow: 1;
   flex-shrink: 1;
-  background-color: #343a40;
+  background-color: var(--column);
   text-align: center;
 }
 .Action button {

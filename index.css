@@ -127,8 +127,4 @@ body {
 .Action button:disabled{
   background-color: var(--column);
   cursor: not-allowed;
-ß}
-
-
-git config --global user.email "haizzzchic@gmail.com"
-git config --global user.name "Kedoichi"
+}
